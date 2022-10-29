@@ -1,5 +1,5 @@
 # Prereqs
-You'll need to make sure node and yarn are installed on your computer to run this project. Before you use `yarn start` to run the app for the first time, make sure you run yarn install first to install the dependencies. 
+You'll need to make sure node and yarn are installed on your computer to run this project. Before you use `yarn start` to run the app for the first time, make sure you run `yarn install` first to install the dependencies. 
 
 # Getting Started with Create React App
 
