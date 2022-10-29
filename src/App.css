@@ -1,38 +1,288 @@
-.App {
-  text-align: center;
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+    font-size: 62.5%; /* font-size 1rem = 10px */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Header */
+
+header {
+    display: flex;
+    background-color: #1f2937;
+    padding: 1rem 14rem;
 }
 
-.App-link {
-  color: #61dafb;
+.header-logo {
+    min-width: 14rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-logo p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #f9faf8;
+}
+
+.header-links-container {
+    display: flex;
+    align-items: center;
+}
+
+.header-link-text {
+    min-width: 11rem;
+    text-align: right;
+    font-size: 1.1rem;
+    color: #e5e7eb;
+}
+
+/* Banner */
+
+.banner {
+    display: flex;
+    background-color: #1f2937;
+    padding: 7rem 14rem;
+}
+
+.banner-info {
+    padding-right: 3rem;
+}
+
+.banner-info h1 {
+    font-size: 3.3rem;
+    font-weight: 700;
+    color: #f9faf8;
+    margin-bottom: 0;
+}
+
+.banner-info p {
+    font-size: 1.3rem;
+    color: #e5e7eb;
+    margin: 0.2rem;
+}
+
+.banner-info button {
+    font-size: 1.2rem;
+    background-color: #3882f6;
+    color: #e5e7eb;
+    width: 9rem;
+    height: 2.5rem;
+    border: 0;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+
+.banner-image {
+    display: flex;
+    align-items: center;
+    min-width: 22rem;
+    max-width: 55rem;
+}
+
+/* middle section */
+
+.middle-section {
+    text-align: center;
+    padding: 0 18rem 7rem 18rem;
+}
+
+.middle-section h2 {
+    font-size: 2.2rem;
+    padding: 2.9rem;
+}
+
+.middle-section-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-image {
+    width: 12vw;
+    height: 12vw;
+    margin: 0 auto;
+    border: 3px solid #3882f6;
+    border-radius: 1.1vw;
+}
+
+.middle-section-card p {
+    width: 12vw;
+    margin: 0 auto;
+    padding-top: 0.4rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #666;
+}
+
+/* quote-section */
+
+.quote-section {
+    background-color: #e5e7eb;
+    padding: 8rem 21.5rem 5rem 21.5rem;
+}
+
+.quote {
+    color: #1f2937;
+    font-size: 2.35rem;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.quote-author {
+    color: #1f2937;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: right;
+    padding-right: 2.7rem;
+}
+
+/* call to action */
+
+.call-to-a-section {
+    display: flex;
+}
+
+.call-to-a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3.3rem 7rem;
+    margin: 5.9rem 14rem;
+    background-color: #3882f6;
+    border-radius: 0.6vw;
+}
+
+.call-to-a .text-col {
+    color: #e5e7eb;
+    max-width: fit-content;
+}
+
+.call-to-a .text-col h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.call-to-a .text-col p {
+    font-size: 1.15rem;
+    font-weight: 200;
+}
+
+.call-to-a button {
+    font-size: 1.1rem;
+    font-weight: 600;
+    background-color: #3882f6;
+    color: #e5e7eb;
+    width: 8rem;
+    height: 2.25rem;
+    border: 0.1rem solid #e5e7eb;
+    border-radius: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    background-color: #1f2937;
+}
+
+footer p {
+    color: #e5e7eb;
+    font-size: 1.1rem;
+    padding: 2.4rem 0;
+}
+
+/* --------------- */
+
+@media screen and (max-width: 600px) {
+    header {
+        padding: 1rem 0 0 0;
+        flex-direction: column;
+    }
+
+    .header-logo {
+        text-align: center;
+    }
+
+    .header-links-container {
+        flex-direction: column;
+        padding: 1rem 0 0 0;
+    }
+
+    .header-link-text {
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    .banner {
+        flex-direction: column;
+        padding: 0 2.5rem 1.5rem 2.5rem;
+        justify-content: center;
+    }
+
+    .banner-info {
+        padding: 1rem 0;
+        text-align: center;
+    }
+
+    .banner-info p {
+        text-align: justify;
+    }
+
+    .banner-image {
+        justify-content: center;
+    }
+
+    .middle-section {
+        padding: 0 0 2.5rem 0;
+    }
+
+    .middle-section-cards {
+        flex-direction: column;
+    }
+
+    .card-image {
+        width: 60vw;
+        height: 60vw;
+    }
+
+    .middle-section-card p {
+        width: 60vw;
+        padding-bottom: 1rem;
+    }
+
+    .quote-section {
+        padding: 2.5rem;
+    }
+
+    .quote {
+        font-size: 2rem;
+        padding-bottom: 1rem;
+    }
+
+    .quote-author {
+        font-size: 1.25rem;
+    }
+
+    .call-to-a {
+        flex-direction: column;
+        padding: 2.5rem 2.5rem;
+        margin: 0;
+    }
+
+    .text-col {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    footer p {
+        font-size: 1rem;
+        padding: 1.5rem 0;
+    }
 }
