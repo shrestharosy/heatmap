@@ -14,6 +14,7 @@ function App() {
             const heatmapInstance = hm.create({
                 container,
                 radius: 20,
+                minOpacity: .4,
             });
 
             container.onmousemove = (e) => {
