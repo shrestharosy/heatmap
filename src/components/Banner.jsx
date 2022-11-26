@@ -1,6 +1,6 @@
 const Banner = () => (
-    <div class='banner'>
-        <div class='banner-info'>
+    <div className='banner'>
+        <div className='banner-info'>
             <h1>Odin Project</h1>
             <p>
                 My name is Rob Kokochak and this is my attempt at re-creating
@@ -13,9 +13,9 @@ const Banner = () => (
             </p>
             <button>Sign Up</button>
         </div>
-        <div class='banner-image'>
+        <div className='banner-image'>
             <img
-                class='bigSurImage'
+                className='bigSurImage'
                 src={'assets/images/Big-Sur-Artefied.jpg'}
                 alt={'banner'}
             />
