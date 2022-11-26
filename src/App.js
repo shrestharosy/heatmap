@@ -14,7 +14,8 @@ function App() {
             const heatmapInstance = hm.create({
                 container,
                 radius: 20,
-                minOpacity: .4,
+                minOpacity: .3,
+                blur: .75
             });
 
             container.onmousemove = (e) => {
@@ -26,7 +27,7 @@ function App() {
                     x = e.touches[0].pageX;
                     y = e.touches[0].pageY;
                 }
-                heatmapInstance.addData({ x, y, value: 1 });
+                heatmapInstance.addData({ x, y, value: 1000 });
             };
         }
     }, []);
