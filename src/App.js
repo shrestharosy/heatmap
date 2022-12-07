@@ -5,19 +5,29 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import hm from 'heatmap.js';
 import { useEffect } from 'react';
+import { getQueriesForElement } from '@testing-library/react';
 
 function App() {
     useEffect(() => {
         const container = document.querySelector('.heatmapContainer');
 
         if (container) {
-            const heatmapInstance = hm.create({
+            const heatmapInstanceMouseMove = hm.create({
                 container,
                 radius: 20,
+                minOpacity: .3,
+                blur: .75
+            });
+
+            const heatmapInstanceClick = hm.create({
+                container,
+                radius: 20,
+                minOpacity: .3,
+                blur: .1,
+                gradient: { '.1': 'magenta'}
             });
 
             container.onmousemove = (e) => {
-                e.preventDefault();
                 // returns horizontal coordinate of the event relative to the current layer
                 let x = e.layerX;
                 let y = e.layerY;
@@ -25,8 +35,18 @@ function App() {
                     x = e.touches[0].pageX;
                     y = e.touches[0].pageY;
                 }
-                heatmapInstance.addData({ x, y, value: 1 });
+                heatmapInstanceMouseMove.addData({ x, y, value: 1000 });
             };
+
+            container.onclick = (e) => {
+                let x = e.layerX;
+                let y = e.layerY;
+                if (e.touches) {
+                    x = e.touches[0].pageX;
+                    y = e.touches[0].pageY;
+                }
+                heatmapInstanceClick.addData({ x, y, value: 1000 });
+            }
         }
     }, []);
 
